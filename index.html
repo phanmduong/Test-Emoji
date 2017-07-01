@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/emojione/3.0.3/lib/js/emojione.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/emojione/3.0.3/extras/css/emojione.min.css"/>
+    <script type="text/javascript">
+        emojione.ascii = true;
+        emojione.greedyMatch = true;
+            </script>
+</head>
+<body>
+<input type="text" id="textInput"/>
+    <input type="button" value="Convert" onclick="convert()"/>
+    <h2 id="textOutput"></h2>
+<script>
+    function convert() {
+        var input = document.getElementById('textInput').value;
+        console.log(input);
+        var output = emojione.unicodeToImage(input);
+        document.getElementById('textOutput').innerHTML = output;
+        console.log(document.getElementById('textOutput').innerHTML);
+    }
+
+</script>
+</body>
+</html>
